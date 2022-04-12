@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SAF-1N-gif">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ThinkNotes-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ThinkNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LD8-No-Br1">
+                                <rect key="frame" x="20" y="113" width="374" height="214"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Hey People. Let's Explore the world of notes Together.
+
+Login to continue.</string>
+                                        <attributes>
+                                            <font key="NSFont" size="20" name="Rockwell-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="TQv-ob-6Xy" id="L7N-Kd-cNQ"/>
+                                </connections>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="7gl-Di-2mV">
+                                <rect key="frame" x="30" y="369" width="354" height="450"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BNj-MD-Ey2">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hj5-pE-UuB" customClass="PasswordTextField" customModule="ThinkNotes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="80" width="354" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="dNn-2B-RLf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xh-fp-wv5">
+                                        <rect key="frame" x="0.0" y="160" width="354" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Login">
+                                                    <attributes>
+                                                        <font key="NSFont" size="24" name="Rockwell-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NZD-Xb-5Pt"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cms-40-Ukd">
+                                        <rect key="frame" x="0.0" y="240" width="354" height="50"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="18"/>
+                                        <color key="textColor" red="0.98892456293106079" green="0.12258689850568771" blue="0.0070632356218993664" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New User !! Sign Up Below" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lST-yq-flT">
+                                        <rect key="frame" x="0.0" y="320" width="354" height="50"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGI-nm-Fbv">
+                                        <rect key="frame" x="0.0" y="400" width="354" height="50"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Sign Up">
+                                                    <attributes>
+                                                        <font key="NSFont" size="24" name="Rockwell-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="p99-o4-eoJ" kind="show" id="laI-qc-sL1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="lST-yq-flT" firstAttribute="height" secondItem="cms-40-Ukd" secondAttribute="height" id="6gR-K9-yHe"/>
+                                    <constraint firstItem="wGI-nm-Fbv" firstAttribute="height" secondItem="BNj-MD-Ey2" secondAttribute="height" id="O1U-Cu-1E6"/>
+                                    <constraint firstItem="lST-yq-flT" firstAttribute="height" secondItem="BNj-MD-Ey2" secondAttribute="height" id="bVe-pE-CRO"/>
+                                    <constraint firstItem="hj5-pE-UuB" firstAttribute="height" secondItem="BNj-MD-Ey2" secondAttribute="height" id="nCt-7k-qeK"/>
+                                    <constraint firstItem="9xh-fp-wv5" firstAttribute="height" secondItem="BNj-MD-Ey2" secondAttribute="height" id="r9D-g4-Y6E"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LD8-No-Br1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="Cbm-JC-TKC"/>
+                            <constraint firstItem="7gl-Di-2mV" firstAttribute="top" secondItem="LD8-No-Br1" secondAttribute="bottom" constant="42" id="G9n-Fl-MJd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LD8-No-Br1" secondAttribute="trailing" constant="20" id="Owi-AX-y8d"/>
+                            <constraint firstItem="LD8-No-Br1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="R7V-6H-jcs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LD8-No-Br1" secondAttribute="trailing" constant="20" id="lZY-dT-XKn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wGI-nm-Fbv" secondAttribute="bottom" constant="43" id="qNQ-bJ-5r1"/>
+                            <constraint firstItem="7gl-Di-2mV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="tS8-QC-5r8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7gl-Di-2mV" secondAttribute="trailing" constant="30" id="xcd-jS-g7c"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ThinkNotes" id="TQv-ob-6Xy"/>
+                    <connections>
+                        <outlet property="EmailTextfield" destination="BNj-MD-Ey2" id="Lxe-76-ac1"/>
+                        <outlet property="LoginButton" destination="9xh-fp-wv5" id="SFk-qN-izv"/>
+                        <outlet property="errorlabel" destination="cms-40-Ukd" id="Dt8-J7-kqS"/>
+                        <outlet property="newLabel" destination="lST-yq-flT" id="IK9-Nc-s6M"/>
+                        <outlet property="passwordTextfield" destination="hj5-pE-UuB" id="fFB-Sb-Ak0"/>
+                        <outlet property="signupButton" destination="wGI-nm-Fbv" id="q9X-hP-z9Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="79.6875"/>
+        </scene>
+        <!--Signup View Controller-->
+        <scene sceneID="5nh-Ho-j8K">
+            <objects>
+                <viewController id="p99-o4-eoJ" customClass="SignupViewController" customModule="ThinkNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="12Z-Qn-P5L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5tC-Re-Mup">
+                                <rect key="frame" x="30" y="212.5" width="354" height="400"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter FirstName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YTe-M3-iIt">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="40"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter LastName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A3y-qj-f6V">
+                                        <rect key="frame" x="0.0" y="60" width="354" height="40"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TkG-Bf-1Fo">
+                                        <rect key="frame" x="0.0" y="120" width="354" height="40"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="51R-7l-ZY2" customClass="PasswordTextField" customModule="ThinkNotes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="180" width="354" height="40"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" smartDashesType="yes"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-Type Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ls4-lZ-ncg" customClass="PasswordTextField" customModule="ThinkNotes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="240" width="354" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="4e8-VI-t0j"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axL-C8-RcN">
+                                        <rect key="frame" x="0.0" y="300" width="354" height="40"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Sign Up">
+                                                    <attributes>
+                                                        <font key="NSFont" size="20" name="Rockwell-Bold"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="signupTapped:" destination="p99-o4-eoJ" eventType="touchUpInside" id="h97-bm-1Nr"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AM4-CN-ZFn">
+                                        <rect key="frame" x="0.0" y="360" width="354" height="40"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Error">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.98892456293106079" green="0.12258689850568771" blue="0.0070632356218993664" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="17" name="Rockwell-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="51R-7l-ZY2" firstAttribute="height" secondItem="TkG-Bf-1Fo" secondAttribute="height" id="7MK-w0-Mp0"/>
+                                    <constraint firstItem="AM4-CN-ZFn" firstAttribute="height" secondItem="YTe-M3-iIt" secondAttribute="height" id="IsE-gh-hav"/>
+                                    <constraint firstItem="A3y-qj-f6V" firstAttribute="height" secondItem="YTe-M3-iIt" secondAttribute="height" id="PWn-X9-oI5"/>
+                                    <constraint firstItem="51R-7l-ZY2" firstAttribute="height" secondItem="YTe-M3-iIt" secondAttribute="height" id="gHp-Yx-6Ih"/>
+                                    <constraint firstItem="ls4-lZ-ncg" firstAttribute="height" secondItem="YTe-M3-iIt" secondAttribute="height" id="tOJ-gH-Dxi"/>
+                                    <constraint firstItem="axL-C8-RcN" firstAttribute="height" secondItem="YTe-M3-iIt" secondAttribute="height" id="wfo-ej-IRm"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kep-7w-9n5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5tC-Re-Mup" firstAttribute="leading" secondItem="kep-7w-9n5" secondAttribute="leading" constant="30" id="CKF-78-Zme"/>
+                            <constraint firstItem="kep-7w-9n5" firstAttribute="bottom" secondItem="5tC-Re-Mup" secondAttribute="bottom" constant="249.5" id="Nll-iD-q1A"/>
+                            <constraint firstItem="kep-7w-9n5" firstAttribute="trailing" secondItem="5tC-Re-Mup" secondAttribute="trailing" constant="30" id="Ysl-xU-glJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4Dy-oy-55I"/>
+                    <connections>
+                        <outlet property="Email" destination="TkG-Bf-1Fo" id="Ln1-UE-Qzs"/>
+                        <outlet property="Firstname" destination="YTe-M3-iIt" id="Uw5-eb-rXN"/>
+                        <outlet property="Lastname" destination="A3y-qj-f6V" id="UIP-Nr-AF6"/>
+                        <outlet property="Password" destination="51R-7l-ZY2" id="9m2-fz-0bD"/>
+                        <outlet property="RePassword" destination="ls4-lZ-ncg" id="SvW-Bt-gnc"/>
+                        <outlet property="SignupButton" destination="axL-C8-RcN" id="Kmo-of-Z4e"/>
+                        <outlet property="errorLabel" destination="AM4-CN-ZFn" id="2Cd-k4-LQr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zYo-bn-XRz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2005.7971014492755" y="-180.13392857142856"/>
+        </scene>
+        <!--ThinkNotes-->
+        <scene sceneID="Mcx-5h-Y5Z">
+            <objects>
+                <viewController storyboardIdentifier="home" id="kRY-Wm-b3K" customClass="HomeViewcontroller" customModule="ThinkNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DZh-9p-ijR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No notes yet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1f-mR-TqQ" userLabel="NoNOtes">
+                                <rect key="frame" x="159" y="437.5" width="96.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5ca-Qh-o4S">
+                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="itemcell" textLabel="usl-K3-Yn8" detailTextLabel="vvd-Rn-IQv" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="3JA-DV-LnM">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3JA-DV-LnM" id="VLp-dP-L6C">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="usl-K3-Yn8">
+                                                    <rect key="frame" x="20" y="3" width="71.5" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="30"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vvd-Rn-IQv">
+                                                    <rect key="frame" x="20" y="33" width="95" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EVM-f9-GP8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="s1f-mR-TqQ" firstAttribute="centerY" secondItem="DZh-9p-ijR" secondAttribute="centerY" id="EUD-BN-ZLj"/>
+                            <constraint firstItem="EVM-f9-GP8" firstAttribute="trailing" secondItem="5ca-Qh-o4S" secondAttribute="trailing" id="LWZ-P9-IbU"/>
+                            <constraint firstAttribute="bottom" secondItem="5ca-Qh-o4S" secondAttribute="bottom" id="Teu-dl-oUL"/>
+                            <constraint firstItem="s1f-mR-TqQ" firstAttribute="centerX" secondItem="DZh-9p-ijR" secondAttribute="centerX" id="XQe-IX-smO"/>
+                            <constraint firstItem="5ca-Qh-o4S" firstAttribute="top" secondItem="EVM-f9-GP8" secondAttribute="top" id="Yug-j3-rJy"/>
+                            <constraint firstItem="5ca-Qh-o4S" firstAttribute="leading" secondItem="EVM-f9-GP8" secondAttribute="leading" id="r3n-cd-UyO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ThinkNotes" id="RrM-nK-Bfk">
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" style="plain" id="jeg-FK-5FQ">
+                            <connections>
+                                <action selector="signout:" destination="kRY-Wm-b3K" id="uwX-0H-m8G"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="h3y-Fd-uK0">
+                            <connections>
+                                <action selector="newNOte:" destination="kRY-Wm-b3K" id="w6a-QL-Xde"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="noNOtes" destination="s1f-mR-TqQ" id="aP5-PU-u2C"/>
+                        <outlet property="tblView" destination="5ca-Qh-o4S" id="0bL-vQ-JLI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oFJ-Rq-Ln4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4385.507246376812" y="-172.76785714285714"/>
+        </scene>
+        <!--Entry View Controller-->
+        <scene sceneID="t9R-5A-TVz">
+            <objects>
+                <viewController storyboardIdentifier="new" id="uHa-2a-GPs" customClass="EntryViewController" customModule="ThinkNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Euz-qE-IGz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tpk-GC-dMJ">
+                                <rect key="frame" x="10" y="54" width="394" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="82J-IF-Ap6"/>
+                                </constraints>
+                                <color key="textColor" red="0.096025955250000003" green="0.37985819970000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Igc-G0-OgE">
+                                <rect key="frame" x="10" y="116" width="394" height="736"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" red="0.29224844154309237" green="0.5999697012601688" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="M7L-DQ-fFr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Igc-G0-OgE" firstAttribute="top" secondItem="Tpk-GC-dMJ" secondAttribute="bottom" constant="10" id="A4g-id-2CE"/>
+                            <constraint firstItem="Tpk-GC-dMJ" firstAttribute="top" secondItem="M7L-DQ-fFr" secondAttribute="top" constant="10" id="DzF-hA-gka"/>
+                            <constraint firstItem="M7L-DQ-fFr" firstAttribute="bottom" secondItem="Igc-G0-OgE" secondAttribute="bottom" constant="10" id="INo-B1-Fw7"/>
+                            <constraint firstItem="Igc-G0-OgE" firstAttribute="leading" secondItem="M7L-DQ-fFr" secondAttribute="leading" constant="10" id="LhP-lu-JpF"/>
+                            <constraint firstItem="Tpk-GC-dMJ" firstAttribute="leading" secondItem="M7L-DQ-fFr" secondAttribute="leading" constant="10" id="WLS-6Z-Dag"/>
+                            <constraint firstItem="M7L-DQ-fFr" firstAttribute="trailing" secondItem="Igc-G0-OgE" secondAttribute="trailing" constant="10" id="WlJ-2p-meu"/>
+                            <constraint firstItem="M7L-DQ-fFr" firstAttribute="trailing" secondItem="Tpk-GC-dMJ" secondAttribute="trailing" constant="10" id="iki-bK-Pdj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="noteField" destination="Igc-G0-OgE" id="WFF-M4-RiK"/>
+                        <outlet property="titleField" destination="Tpk-GC-dMJ" id="1gG-Cx-NsT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hng-WR-3QA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6375.36231884058" y="-4.0178571428571423"/>
+        </scene>
+        <!--Note View Controller-->
+        <scene sceneID="LMq-1B-N8M">
+            <objects>
+                <viewController storyboardIdentifier="note" id="Kfj-ID-GHS" customClass="NoteViewController" customModule="ThinkNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sRy-ua-xrP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCk-sU-8yd">
+                                <rect key="frame" x="10" y="54" width="394" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="MbX-qi-ci5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="30"/>
+                                <color key="textColor" red="0.096025955245628847" green="0.37985819968905288" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yto-aZ-Fxd">
+                                <rect key="frame" x="0.0" y="114" width="414" height="748"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Fzm-4B-7iM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wCk-sU-8yd" firstAttribute="top" secondItem="Fzm-4B-7iM" secondAttribute="top" constant="10" id="HtU-jy-WZb"/>
+                            <constraint firstItem="wCk-sU-8yd" firstAttribute="leading" secondItem="Fzm-4B-7iM" secondAttribute="leading" constant="10" id="OP9-0e-FMO"/>
+                            <constraint firstItem="Fzm-4B-7iM" firstAttribute="bottom" secondItem="yto-aZ-Fxd" secondAttribute="bottom" id="RKg-9r-a6c"/>
+                            <constraint firstItem="Fzm-4B-7iM" firstAttribute="trailing" secondItem="wCk-sU-8yd" secondAttribute="trailing" constant="10" id="fXC-k6-ZUk"/>
+                            <constraint firstItem="Fzm-4B-7iM" firstAttribute="trailing" secondItem="yto-aZ-Fxd" secondAttribute="trailing" id="hYl-vx-t6O"/>
+                            <constraint firstItem="yto-aZ-Fxd" firstAttribute="top" secondItem="wCk-sU-8yd" secondAttribute="bottom" id="jV3-I7-IUO"/>
+                            <constraint firstItem="yto-aZ-Fxd" firstAttribute="leading" secondItem="Fzm-4B-7iM" secondAttribute="leading" id="xbS-st-qzX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="noteLabel" destination="yto-aZ-Fxd" id="4uz-sY-M9Y"/>
+                        <outlet property="titleLabel" destination="wCk-sU-8yd" id="xYq-pe-yTx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wA6-qU-5Pz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5744.9275362318849" y="-50.223214285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="i8T-KS-WZQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SAF-1N-gif" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ZST-Xx-dD4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="27"/>
+                            <color key="textColor" systemColor="tintColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="40"/>
+                            <color key="textColor" systemColor="systemBlueColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="67v-QP-6HP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QRQ-sR-NNx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4" y="80"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oZk-zA-zFc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cAU-oB-qtY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="MjH-WT-82q">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="40"/>
+                            <color key="textColor" systemColor="linkColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kRY-Wm-b3K" kind="relationship" relationship="rootViewController" id="MqD-aQ-DY5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qdH-f3-NSM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3473.913043478261" y="-173.4375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
